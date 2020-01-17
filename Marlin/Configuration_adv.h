@@ -33,6 +33,13 @@
  */
 #define CONFIGURATION_ADV_H_VERSION 020000
 
+
+#if defined(TARGET_LPC1768)
+  #define SDCARD_CONNECTION
+  #if ENABLED(LPC_SD_ONBOARD)
+    #define USB_SD_ONBOARD
+  #endif
+#endif
 // @section temperature
 
 //===========================================================================
