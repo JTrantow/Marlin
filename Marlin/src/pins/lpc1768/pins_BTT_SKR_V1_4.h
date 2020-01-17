@@ -120,7 +120,7 @@
 //
 // Software SPI pins for TMC2130 stepper drivers
 //
-#if ENABLED(TMC_USE_SW_SPI)
+#if 0 //ENABLED(TMC_USE_SW_SPI)
   #ifndef TMC_SW_MOSI
     #define TMC_SW_MOSI    P1_17
   #endif
@@ -179,7 +179,7 @@
 //
 // SD Connection
 //
-#if SD_CONNECTION_IS(LCD)
+#if 0 //SD_CONNECTION_IS(LCD)
   #define SS_PIN           P0_16
 #endif
 
