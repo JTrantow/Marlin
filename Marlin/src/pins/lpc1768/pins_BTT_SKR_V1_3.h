@@ -46,8 +46,15 @@
 #endif
 
 #if Z_HOME_DIR == -1 || !Z_STALL_SENSITIVITY
-  #define Z_MIN_PIN          P1_25   // Z_MIN
-  #define Z_MAX_PIN          P1_24   // Z_MAX
+//  #define Z_MIN_PIN          P1_25   // Z_MIN
+
+  /*
+    Use Probe connected to servo0 pin as Z min endstop.
+    The Z endstop has a pull up resistor that does not work with the probe.
+    Using the servo pin avoids this pull up resistor problem.
+  */
+#define Z_MIN_PIN P2_00
+//  #define Z_MAX_PIN          P1_24   // Z_MAX
 #else
   #define Z_MIN_PIN          P1_24   // Z_MAX
   #define Z_MAX_PIN          P1_25   // Z_MIN
@@ -59,7 +66,7 @@
 // Servos
 //
 #ifndef SERVO0_PIN
-  #define SERVO0_PIN       P2_00
+  //#define SERVO0_PIN       P2_00
 #endif
 
 //
