@@ -65,15 +65,15 @@
 #define Y_DIAG_PIN                         P1_28  // Y-STOP
 #define Z_DIAG_PIN                         P1_27  // Z-STOP
 #define E0_DIAG_PIN                        P1_26  // E0DET
-#define E1_DIAG_PIN                        P1_25  // E1DET
+//#define E1_DIAG_PIN                        P1_25  // E1DET
 
 //
 // Limit Switches
 //
 #define X_STOP_PIN                    X_DIAG_PIN
 #define X_OTHR_PIN                         P1_26  // E0DET
-#define Y_STOP_PIN                    Y_DIAG_PIN
-#define Y_OTHR_PIN                         P1_25  // E1DET
+#define Y_STOP_PIN                         P1_00 // P1_28(Y_DIAG_PIN) was not working.
+//#define Y_OTHR_PIN                         P1_25  // E1DET
 #ifndef Z_STOP_PIN
   #define Z_STOP_PIN                  Z_DIAG_PIN
 #endif
@@ -97,7 +97,7 @@
 // Filament Runout Sensor
 //
 #define FIL_RUNOUT_PIN                     P1_26  // E0DET
-#define FIL_RUNOUT2_PIN                    P1_25  // E1DET
+//#define FIL_RUNOUT2_PIN                    P1_25  // E1DET
 
 //
 // Power Supply Control
@@ -110,7 +110,7 @@
 // Power Loss Detection
 //
 #ifndef POWER_LOSS_PIN
-  #define POWER_LOSS_PIN                   P1_00  // PWRDET
+//  #define POWER_LOSS_PIN                   P1_00  // PWRDET
 #endif
 
 //
