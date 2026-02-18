@@ -340,7 +340,7 @@
  */
 #if TEMP_SENSOR_BED && ENABLED(THERMAL_PROTECTION_BED)
   #define THERMAL_PROTECTION_BED_PERIOD        20 // (seconds)
-  #define THERMAL_PROTECTION_BED_HYSTERESIS     2 // (°C)
+  #define THERMAL_PROTECTION_BED_HYSTERESIS     5 // (°C)
 
   /**
    * As described above, except for the bed (M140/M190/M303).
@@ -2469,7 +2469,7 @@
 //  #define PROBE_PT_1 {   0, 335 }   // (mm) { x, y }
   #define PROBE_PT_1 {   0, 315 }   // (mm) { x, y }
   #define PROBE_PT_2 {   0,  55 }
-  #define PROBE_PT_3 { 300, 195 } 
+  #define PROBE_PT_3 { 295, 195 } 
 #endif
 
 /**
@@ -2802,7 +2802,7 @@
 //#define NO_TIMEOUTS 1000 // (ms)
 
 // Some clients will have this feature soon. This could make the NO_TIMEOUTS unnecessary.
-#define ADVANCED_OK
+//#define ADVANCED_OK
 
 // Printrun may have trouble receiving long strings all at once.
 // This option inserts short delays between lines of serial output.

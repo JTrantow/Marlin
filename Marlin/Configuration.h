@@ -723,9 +723,9 @@
     #define DEFAULT_KI_LIST {   1.08,   1.08 }
     #define DEFAULT_KD_LIST { 114.00, 114.00 }
   #else
-    #define DEFAULT_KP 26.43
-    #define DEFAULT_KI 5.08
-    #define DEFAULT_KD 34.37
+    #define DEFAULT_KP 15.8345
+    #define DEFAULT_KI 2.7438
+    #define DEFAULT_KD 22.8452
   #endif
 #else
   #define BANG_MAX 255    // Limit hotend current while in bang-bang mode; 255=full current
@@ -800,7 +800,7 @@
  * When set to any value below 255, enables a form of PWM to the bed that acts like a divider
  * so don't use it unless you are OK with PWM on your bed. (See the comment on enabling PIDTEMPBED)
  */
-#define MAX_BED_POWER 255 // limits duty cycle to bed; 255=full current
+#define MAX_BED_POWER 245 // limits duty cycle to bed; 255=full current
 
 /**
  * PID Bed Heating
@@ -828,9 +828,10 @@
   //#define DEFAULT_BED_KD 305.4
 
   // FIND YOUR OWN: "M303 E-1 C8 S90" to run autotune on the bed at 90 degreesC for 8 cycles.
-  #define DEFAULT_BED_KP 74.90
-  #define DEFAULT_BED_KI 14.96
-  #define DEFAULT_BED_KD 249.90
+  
+#define DEFAULT_BED_KP 53.9084
+#define DEFAULT_BED_KI 10.2293
+#define DEFAULT_BED_KD 189.3981
 
 #else
   //#define BED_LIMIT_SWITCHING   // Keep the bed temperature within BED_HYSTERESIS of the target
@@ -1898,7 +1899,7 @@
 // @section extruder
 
 // For direct drive extruder v9 set to true, for geared extruder set to false.
-#define INVERT_E0_DIR true
+#define INVERT_E0_DIR false
 #define INVERT_E1_DIR false
 #define INVERT_E2_DIR false
 #define INVERT_E3_DIR false
@@ -1966,7 +1967,7 @@
 #define Z_MIN_POS 0
 #define X_MAX_POS X_BED_SIZE
 #define Y_MAX_POS (424-30-15) //Y_BED_SIZE
-#define Z_MAX_POS (545-6+2)         // Must be accurate within Z_PROBE_ERROR_TOLERANCE for probing to work.
+#define Z_MAX_POS (545-3)         // Must be accurate within Z_PROBE_ERROR_TOLERANCE for probing to work.
 //#define I_MIN_POS 0
 //#define I_MAX_POS 360
 //#define J_MIN_POS 0
